@@ -22,6 +22,12 @@
 		9C4627F718833D9700A3DD6F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4627D618833D9600A3DD6F /* UIKit.framework */; };
 		9C4627FF18833D9700A3DD6F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C4627FD18833D9700A3DD6F /* InfoPlist.strings */; };
 		9C46280118833D9700A3DD6F /* nycTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C46280018833D9700A3DD6F /* nycTests.m */; };
+		9CE1F73818833ED600395F4F /* socialService.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CE1F73718833ED600395F4F /* socialService.png */; };
+		9CE1F73B18833EE400395F4F /* transportation.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CE1F73918833EE400395F4F /* transportation.png */; };
+		9CE1F73C18833EE400395F4F /* nyc.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CE1F73A18833EE400395F4F /* nyc.png */; };
+		9CE1F73E18833EEE00395F4F /* business.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CE1F73D18833EEE00395F4F /* business.png */; };
+		9CE1F74018833EF700395F4F /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CE1F73F18833EF700395F4F /* info.png */; };
+		9CE1F74218833F0300395F4F /* recreation.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CE1F74118833F0300395F4F /* recreation.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +61,12 @@
 		9C4627FC18833D9700A3DD6F /* nycTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "nycTests-Info.plist"; sourceTree = "<group>"; };
 		9C4627FE18833D9700A3DD6F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9C46280018833D9700A3DD6F /* nycTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = nycTests.m; sourceTree = "<group>"; };
+		9CE1F73718833ED600395F4F /* socialService.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = socialService.png; sourceTree = "<group>"; };
+		9CE1F73918833EE400395F4F /* transportation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transportation.png; sourceTree = "<group>"; };
+		9CE1F73A18833EE400395F4F /* nyc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nyc.png; sourceTree = "<group>"; };
+		9CE1F73D18833EEE00395F4F /* business.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = business.png; sourceTree = "<group>"; };
+		9CE1F73F18833EF700395F4F /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
+		9CE1F74118833F0300395F4F /* recreation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recreation.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +141,7 @@
 		9C4627D918833D9600A3DD6F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9CE1F73618833EC800395F4F /* icons */,
 				9C4627DA18833D9600A3DD6F /* nyc-Info.plist */,
 				9C4627DB18833D9600A3DD6F /* InfoPlist.strings */,
 				9C4627DE18833D9600A3DD6F /* main.m */,
@@ -153,6 +166,19 @@
 				9C4627FD18833D9700A3DD6F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9CE1F73618833EC800395F4F /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				9CE1F73D18833EEE00395F4F /* business.png */,
+				9CE1F74118833F0300395F4F /* recreation.png */,
+				9CE1F73F18833EF700395F4F /* info.png */,
+				9CE1F73918833EE400395F4F /* transportation.png */,
+				9CE1F73A18833EE400395F4F /* nyc.png */,
+				9CE1F73718833ED600395F4F /* socialService.png */,
+			);
+			name = icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +258,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C4627E918833D9600A3DD6F /* Main_iPad.storyboard in Resources */,
+				9CE1F73818833ED600395F4F /* socialService.png in Resources */,
+				9CE1F74018833EF700395F4F /* info.png in Resources */,
+				9CE1F74218833F0300395F4F /* recreation.png in Resources */,
 				9C4627EE18833D9600A3DD6F /* Images.xcassets in Resources */,
+				9CE1F73E18833EEE00395F4F /* business.png in Resources */,
+				9CE1F73B18833EE400395F4F /* transportation.png in Resources */,
 				9C4627E618833D9600A3DD6F /* Main_iPhone.storyboard in Resources */,
+				9CE1F73C18833EE400395F4F /* nyc.png in Resources */,
 				9C4627DD18833D9600A3DD6F /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +427,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "nyc/nyc-Prefix.pch";
 				INFOPLIST_FILE = "nyc/nyc-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -408,6 +441,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "nyc/nyc-Prefix.pch";
 				INFOPLIST_FILE = "nyc/nyc-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -474,6 +508,7 @@
 				9C46280618833D9700A3DD6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9C46280718833D9700A3DD6F /* Build configuration list for PBXNativeTarget "nycTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +517,7 @@
 				9C46280918833D9700A3DD6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
