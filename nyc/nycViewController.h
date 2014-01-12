@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  nycViewController.h
 //  nyc
 //
 //  Created by Marcelo Sampaio on 1/12/14.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface nycViewController : UITableViewController
+
+@property NSMutableArray *nycSource;
 
 @end
