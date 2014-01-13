@@ -85,11 +85,11 @@
             </objects>
             <point key="canvasLocation" x="895" y="-298"/>
         </scene>
-        <!--Navigation Controller - New York City-->
+        <!--Navigation Controller - New York-->
         <scene sceneID="6hl-GX-DGv">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UZR-ta-X8N" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="New York City" image="nyc.png" id="jnp-hx-dIh"/>
+                    <tabBarItem key="tabBarItem" title="New York" image="nyc.png" id="jnp-hx-dIh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8L1-gl-Aag">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
