@@ -1,39 +1,18 @@
 //
-//  nycViewController.m
+//  nycTableViewController.m
 //  nyc
 //
-//  Created by Marcelo Sampaio on 1/12/14.
+//  Created by Marcelo Sampaio on 1/13/14.
 //  Copyright (c) 2014 Marcelo Sampaio. All rights reserved.
 //
 
-#import "nycViewController.h"
 #import "nycTableViewController.h"
-#import "database.h"
 
-@interface nycViewController ()
-
-@property (nonatomic,strong) database *brain;
+@interface nycTableViewController ()
 
 @end
 
-@implementation nycViewController
-
-@synthesize nycSource;
-@synthesize brain=_brain;
-
-//Lazy Instatiation de meu Model ------
-- (database *) brain
-{
-    if(!_brain)
-    {
-        _brain = [[database alloc] init];
-    }
-    return _brain;
-}
-// -------------- end of lazy instatiation
-
-
-
+@implementation nycTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -47,24 +26,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // open app database
-    [self.brain openDB];
-    
-    [self loadSource];
 
+    NSLog(@"carreguei nycTableViewController com parametro = %@",self.detailItem);
+    
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-
--(void)loadSource
-{
-    self.nycSource=[[NSMutableArray alloc]initWithObjects:@"Business",@"Recreation",@"Social Services",@"Transportation", nil];
-}
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -83,7 +54,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.nycSource count];
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -92,52 +63,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.textLabel.text=[self.nycSource objectAtIndex:indexPath.row];
-    switch (indexPath.row) {
-        case 0:
-            cell.imageView.image=[UIImage imageNamed:@"business.png"];
-            break;
-        case 1:
-            cell.imageView.image=[UIImage imageNamed:@"recreation.png"];
-            break;
-        case 2:
-            cell.imageView.image=[UIImage imageNamed:@"socialService.png"];
-            break;
-        default:
-            cell.imageView.image=[UIImage imageNamed:@"transportation.png"];
-            break;
-            
-    }
     
     return cell;
 }
-
-
-// Passing nycTableViewController parameter
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        self.nycTableViewController.detailItem = [self.nycSource objectAtIndex:indexPath.row];
-    }
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        [[segue destinationViewController] setDetailItem:[self.nycSource objectAtIndex:indexPath.row]];
-        
-    }
-}
-
-
-
-
-
-
-
-
-
 
 /*
 // Override to support conditional editing of the table view.

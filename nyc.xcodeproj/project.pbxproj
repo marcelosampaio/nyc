@@ -10,6 +10,7 @@
 		9C3B51CC1884672900666371 /* nycImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C3B51CB1884672900666371 /* nycImage.jpg */; };
 		9C3B51CE18846F4D00666371 /* nycImageiPad.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 9C3B51CD18846F4D00666371 /* nycImageiPad.JPG */; };
 		9C3B51D0188476A300666371 /* nycImage3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9C3B51CF188476A300666371 /* nycImage3.jpeg */; };
+		9C3B51D318848A5300666371 /* nycTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B51D218848A5300666371 /* nycTableViewController.m */; };
 		9C4627D318833D9600A3DD6F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4627D218833D9600A3DD6F /* Foundation.framework */; };
 		9C4627D518833D9600A3DD6F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4627D418833D9600A3DD6F /* CoreGraphics.framework */; };
 		9C4627D718833D9600A3DD6F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4627D618833D9600A3DD6F /* UIKit.framework */; };
@@ -69,6 +70,8 @@
 		9C3B51CB1884672900666371 /* nycImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nycImage.jpg; sourceTree = "<group>"; };
 		9C3B51CD18846F4D00666371 /* nycImageiPad.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nycImageiPad.JPG; sourceTree = "<group>"; };
 		9C3B51CF188476A300666371 /* nycImage3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nycImage3.jpeg; sourceTree = "<group>"; };
+		9C3B51D118848A5300666371 /* nycTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nycTableViewController.h; sourceTree = "<group>"; };
+		9C3B51D218848A5300666371 /* nycTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nycTableViewController.m; sourceTree = "<group>"; };
 		9C4627CF18833D9600A3DD6F /* nyc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nyc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C4627D218833D9600A3DD6F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9C4627D418833D9600A3DD6F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -190,6 +193,8 @@
 				9CE1F7441883422800395F4F /* infoViewController.m */,
 				9CE1F7461883424F00395F4F /* nycViewController.h */,
 				9CE1F7471883424F00395F4F /* nycViewController.m */,
+				9C3B51D118848A5300666371 /* nycTableViewController.h */,
+				9C3B51D218848A5300666371 /* nycTableViewController.m */,
 				9C4627ED18833D9600A3DD6F /* Images.xcassets */,
 				9C4627D918833D9600A3DD6F /* Supporting Files */,
 			);
@@ -395,6 +400,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C3B51D318848A5300666371 /* nycTableViewController.m in Sources */,
 				9C4627E318833D9600A3DD6F /* AppDelegate.m in Sources */,
 				9C4627DF18833D9600A3DD6F /* main.m in Sources */,
 				9CE1F7451883422800395F4F /* infoViewController.m in Sources */,
