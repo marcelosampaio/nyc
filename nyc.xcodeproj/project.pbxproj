@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C3B51CC1884672900666371 /* nycImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C3B51CB1884672900666371 /* nycImage.jpg */; };
+		9C3B51CE18846F4D00666371 /* nycImageiPad.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 9C3B51CD18846F4D00666371 /* nycImageiPad.JPG */; };
 		9C4627D318833D9600A3DD6F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4627D218833D9600A3DD6F /* Foundation.framework */; };
 		9C4627D518833D9600A3DD6F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4627D418833D9600A3DD6F /* CoreGraphics.framework */; };
 		9C4627D718833D9600A3DD6F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4627D618833D9600A3DD6F /* UIKit.framework */; };
@@ -63,6 +65,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C3B51CB1884672900666371 /* nycImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nycImage.jpg; sourceTree = "<group>"; };
+		9C3B51CD18846F4D00666371 /* nycImageiPad.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nycImageiPad.JPG; sourceTree = "<group>"; };
 		9C4627CF18833D9600A3DD6F /* nyc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nyc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C4627D218833D9600A3DD6F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9C4627D418833D9600A3DD6F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -197,6 +201,8 @@
 				9CE1F73618833EC800395F4F /* icons */,
 				9C4627DA18833D9600A3DD6F /* nyc-Info.plist */,
 				9C4627DB18833D9600A3DD6F /* InfoPlist.strings */,
+				9C3B51CB1884672900666371 /* nycImage.jpg */,
+				9C3B51CD18846F4D00666371 /* nycImageiPad.JPG */,
 				9C4627DE18833D9600A3DD6F /* main.m */,
 				9C4627E018833D9600A3DD6F /* nyc-Prefix.pch */,
 			);
@@ -336,6 +342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C3B51CC1884672900666371 /* nycImage.jpg in Resources */,
 				9CBDE8151883751F001FA2B8 /* icon_iPad-40.png in Resources */,
 				9CBDE80F1883751F001FA2B8 /* icon-57.png in Resources */,
 				9C4627E918833D9600A3DD6F /* Main_iPad.storyboard in Resources */,
@@ -344,6 +351,7 @@
 				9CBDE8101883751F001FA2B8 /* icon-57@2x.png in Resources */,
 				9CBDE81D1883751F001FA2B8 /* iconiTunesArtWork-512.png in Resources */,
 				9CBDE80E1883751F001FA2B8 /* icon-29@2x.png in Resources */,
+				9C3B51CE18846F4D00666371 /* nycImageiPad.JPG in Resources */,
 				9CBDE80D1883751F001FA2B8 /* icon-29.png in Resources */,
 				9CE1F74218833F0300395F4F /* recreation.png in Resources */,
 				9CBDE8191883751F001FA2B8 /* icon_iPad-72.png in Resources */,
