@@ -7,14 +7,32 @@
 //
 
 #import "nycViewController.h"
+#import "database.h"
 
 @interface nycViewController ()
+
+@property (nonatomic,strong) database *brain;
 
 @end
 
 @implementation nycViewController
 
 @synthesize nycSource;
+@synthesize brain=_brain;
+
+//Lazy Instatiation de meu Model ------
+- (database *) brain
+{
+    if(!_brain)
+    {
+        _brain = [[database alloc] init];
+    }
+    return _brain;
+}
+// -------------- end of lazy instatiation
+
+
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -28,6 +46,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // open app database
+    [self.brain openDB];
     
     [self loadSource];
 
