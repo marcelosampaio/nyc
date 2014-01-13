@@ -21,9 +21,6 @@
 		9C4627F718833D9700A3DD6F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4627D618833D9600A3DD6F /* UIKit.framework */; };
 		9C4627FF18833D9700A3DD6F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C4627FD18833D9700A3DD6F /* InfoPlist.strings */; };
 		9C46280118833D9700A3DD6F /* nycTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C46280018833D9700A3DD6F /* nycTests.m */; };
-		9CBDE7F618837006001FA2B8 /* logo114_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBDE7F418837006001FA2B8 /* logo114_114.png */; };
-		9CBDE7F718837006001FA2B8 /* logo57_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBDE7F518837006001FA2B8 /* logo57_57.png */; };
-		9CBDE80C1883751F001FA2B8 /* icon72.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBDE7F81883751F001FA2B8 /* icon72.png */; };
 		9CBDE80D1883751F001FA2B8 /* icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBDE7FA1883751F001FA2B8 /* icon-29.png */; };
 		9CBDE80E1883751F001FA2B8 /* icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBDE7FB1883751F001FA2B8 /* icon-29@2x.png */; };
 		9CBDE80F1883751F001FA2B8 /* icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBDE7FC1883751F001FA2B8 /* icon-57.png */; };
@@ -42,7 +39,6 @@
 		9CBDE81C1883751F001FA2B8 /* icon_iPad-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBDE8091883751F001FA2B8 /* icon_iPad-76@2x.png */; };
 		9CBDE81D1883751F001FA2B8 /* iconiTunesArtWork-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBDE80A1883751F001FA2B8 /* iconiTunesArtWork-512.png */; };
 		9CBDE81E1883751F001FA2B8 /* iconiTunesArtWork-512@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBDE80B1883751F001FA2B8 /* iconiTunesArtWork-512@2x.png */; };
-		9CBDE820188375AE001FA2B8 /* icon_144.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBDE81F188375AE001FA2B8 /* icon_144.png */; };
 		9CE1F73818833ED600395F4F /* socialService.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CE1F73718833ED600395F4F /* socialService.png */; };
 		9CE1F73B18833EE400395F4F /* transportation.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CE1F73918833EE400395F4F /* transportation.png */; };
 		9CE1F73C18833EE400395F4F /* nyc.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CE1F73A18833EE400395F4F /* nyc.png */; };
@@ -82,9 +78,6 @@
 		9C4627FC18833D9700A3DD6F /* nycTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "nycTests-Info.plist"; sourceTree = "<group>"; };
 		9C4627FE18833D9700A3DD6F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9C46280018833D9700A3DD6F /* nycTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = nycTests.m; sourceTree = "<group>"; };
-		9CBDE7F418837006001FA2B8 /* logo114_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo114_114.png; sourceTree = "<group>"; };
-		9CBDE7F518837006001FA2B8 /* logo57_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo57_57.png; sourceTree = "<group>"; };
-		9CBDE7F81883751F001FA2B8 /* icon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon72.png; sourceTree = "<group>"; };
 		9CBDE7FA1883751F001FA2B8 /* icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29.png"; sourceTree = "<group>"; };
 		9CBDE7FB1883751F001FA2B8 /* icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29@2x.png"; sourceTree = "<group>"; };
 		9CBDE7FC1883751F001FA2B8 /* icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-57.png"; sourceTree = "<group>"; };
@@ -103,7 +96,6 @@
 		9CBDE8091883751F001FA2B8 /* icon_iPad-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_iPad-76@2x.png"; sourceTree = "<group>"; };
 		9CBDE80A1883751F001FA2B8 /* iconiTunesArtWork-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconiTunesArtWork-512.png"; sourceTree = "<group>"; };
 		9CBDE80B1883751F001FA2B8 /* iconiTunesArtWork-512@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconiTunesArtWork-512@2x.png"; sourceTree = "<group>"; };
-		9CBDE81F188375AE001FA2B8 /* icon_144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_144.png; sourceTree = "<group>"; };
 		9CE1F73718833ED600395F4F /* socialService.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = socialService.png; sourceTree = "<group>"; };
 		9CE1F73918833EE400395F4F /* transportation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transportation.png; sourceTree = "<group>"; };
 		9CE1F73A18833EE400395F4F /* nyc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nyc.png; sourceTree = "<group>"; };
@@ -143,10 +135,6 @@
 		9C4627C618833D9600A3DD6F = {
 			isa = PBXGroup;
 			children = (
-				9CBDE7F418837006001FA2B8 /* logo114_114.png */,
-				9CBDE7F518837006001FA2B8 /* logo57_57.png */,
-				9CBDE81F188375AE001FA2B8 /* icon_144.png */,
-				9CBDE7F81883751F001FA2B8 /* icon72.png */,
 				9CBDE7F91883751F001FA2B8 /* nycLogoIcons */,
 				9C4627D818833D9600A3DD6F /* nyc */,
 				9C4627FA18833D9700A3DD6F /* nycTests */,
@@ -336,7 +324,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CBDE820188375AE001FA2B8 /* icon_144.png in Resources */,
 				9CBDE8151883751F001FA2B8 /* icon_iPad-40.png in Resources */,
 				9CBDE80F1883751F001FA2B8 /* icon-57.png in Resources */,
 				9C4627E918833D9600A3DD6F /* Main_iPad.storyboard in Resources */,
@@ -348,7 +335,6 @@
 				9CBDE80D1883751F001FA2B8 /* icon-29.png in Resources */,
 				9CE1F74218833F0300395F4F /* recreation.png in Resources */,
 				9CBDE8191883751F001FA2B8 /* icon_iPad-72.png in Resources */,
-				9CBDE7F718837006001FA2B8 /* logo57_57.png in Resources */,
 				9CBDE81B1883751F001FA2B8 /* icon_iPad-76.png in Resources */,
 				9CBDE8181883751F001FA2B8 /* icon_iPad-50@2x.png in Resources */,
 				9C4627EE18833D9600A3DD6F /* Images.xcassets in Resources */,
@@ -358,8 +344,6 @@
 				9CBDE8161883751F001FA2B8 /* icon_iPad-40@2x.png in Resources */,
 				9CE1F73B18833EE400395F4F /* transportation.png in Resources */,
 				9CBDE81A1883751F001FA2B8 /* icon_iPad-72@2x.png in Resources */,
-				9CBDE7F618837006001FA2B8 /* logo114_114.png in Resources */,
-				9CBDE80C1883751F001FA2B8 /* icon72.png in Resources */,
 				9CBDE8111883751F001FA2B8 /* icon-60.png in Resources */,
 				9C4627E618833D9600A3DD6F /* Main_iPhone.storyboard in Resources */,
 				9CE1F73C18833EE400395F4F /* nyc.png in Resources */,
