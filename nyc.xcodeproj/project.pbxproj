@@ -135,7 +135,6 @@
 		9C4627C618833D9600A3DD6F = {
 			isa = PBXGroup;
 			children = (
-				9CBDE7F91883751F001FA2B8 /* nycLogoIcons */,
 				9C4627D818833D9600A3DD6F /* nyc */,
 				9C4627FA18833D9700A3DD6F /* nycTests */,
 				9C4627D118833D9600A3DD6F /* Frameworks */,
@@ -183,6 +182,7 @@
 		9C4627D918833D9600A3DD6F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9CBDE7F91883751F001FA2B8 /* nycLogoIcons */,
 				9CE1F73618833EC800395F4F /* icons */,
 				9C4627DA18833D9600A3DD6F /* nyc-Info.plist */,
 				9C4627DB18833D9600A3DD6F /* InfoPlist.strings */,
@@ -233,7 +233,7 @@
 				9CBDE80B1883751F001FA2B8 /* iconiTunesArtWork-512@2x.png */,
 			);
 			path = nycLogoIcons;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		9CE1F73618833EC800395F4F /* icons */ = {
 			isa = PBXGroup;
