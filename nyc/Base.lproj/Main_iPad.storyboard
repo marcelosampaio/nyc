@@ -9,7 +9,7 @@
         <scene sceneID="Vn3-Jl-FHI">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="QIT-el-bMK" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="lOi-Cs-Jg5">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -83,6 +83,12 @@
                     <view key="view" contentMode="scaleToFill" id="cky-UB-VzX">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconiTunesArtWork-512.png" translatesAutoresizingMaskIntoConstraints="NO" id="YLK-v4-Wyz">
+                                <rect key="frame" x="224" y="352" width="320" height="320"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Info" image="info.png" id="ZcN-Ga-oL7"/>
@@ -93,6 +99,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="iconiTunesArtWork-512.png" width="512" height="512"/>
         <image name="info.png" width="28" height="28"/>
         <image name="nyc.png" width="26" height="21"/>
     </resources>
