@@ -84,8 +84,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nycImage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="qux-qW-cKu">
-                                <rect key="frame" x="-12" y="0.0" width="768" height="1024"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nycImageiPad.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="qux-qW-cKu">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
@@ -116,7 +116,7 @@
     <resources>
         <image name="info.png" width="28" height="28"/>
         <image name="nyc.png" width="26" height="21"/>
-        <image name="nycImage.jpg" width="750" height="1478"/>
+        <image name="nycImageiPad.JPG" width="2592" height="1944"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackOpaque"/>
