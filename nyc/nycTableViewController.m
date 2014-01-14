@@ -7,6 +7,8 @@
 //
 
 #import "nycTableViewController.h"
+#import "nycSubTableViewController.h"
+
 
 @interface nycTableViewController ()
 
@@ -28,7 +30,8 @@
 {
     [super viewDidLoad];
     [self loadSource];
-    
+    self.navigationItem.title=self.detailItem;
+
     NSLog(@"carreguei nycTableViewController com parametro = %@",self.detailItem);
     
     
@@ -80,6 +83,31 @@
     
     return cell;
 }
+
+
+// Passing nycTableViewController parameter
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        self.nycSubTableViewController.detailItem = [self.nycSource objectAtIndex:indexPath.row];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"showDetail2"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        [[segue destinationViewController] setDetailItem:[self.nycSource objectAtIndex:indexPath.row]];
+        
+    }
+}
+
+
+
+
+
+
+
 
 /*
 // Override to support conditional editing of the table view.

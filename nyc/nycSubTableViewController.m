@@ -30,6 +30,7 @@
     [super viewDidLoad];
     // display input property
     [self loadSource];
+    self.navigationItem.title=self.detailItem;
     NSLog(@"carreguei nycSubTableViewController com parametro de entrada = %@",self.detailItem);
     
     

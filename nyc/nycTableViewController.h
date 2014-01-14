@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class nycSubTableViewController;
+
 @interface nycTableViewController : UITableViewController
 
 // parameter from nycViewController
@@ -15,6 +17,8 @@
 //-----------------------------------------
 
 @property NSMutableArray *nycSource;
+
+@property (strong, nonatomic) nycSubTableViewController *nycSubTableViewController;
 
 
 @end
