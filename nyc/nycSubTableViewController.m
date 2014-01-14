@@ -44,7 +44,7 @@
 
 -(void)loadSource
 {
-    self.subMasterSource=[[NSMutableArray alloc]initWithObjects:@"teste1",@"teste2", nil];
+    self.subMasterSource=[[NSMutableArray alloc]initWithObjects:@"teste1",@"teste2",@"teste3",@"teste4",@"teste5",@"teste6",@"teste7",@"teste8",@"teste9",@"teste10", nil];
 }
 
 
