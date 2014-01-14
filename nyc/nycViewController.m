@@ -62,7 +62,7 @@
 
 -(void)loadSource
 {
-    self.nycSource=[[NSMutableArray alloc]initWithObjects:@"Business",@"Recreation",@"Social Services",@"Transportation", nil];
+    self.nycSource=[[NSMutableArray alloc]initWithObjects:@"Business",@"Recreation",@"Social",@"Transports", nil];
 }
 
 

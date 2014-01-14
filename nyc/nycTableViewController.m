@@ -15,6 +15,7 @@
 @end
 
 @implementation nycTableViewController
+
 @synthesize nycSource;
 
 - (id)initWithStyle:(UITableViewStyle)style

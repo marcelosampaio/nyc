@@ -14,6 +14,7 @@
 @end
 
 @implementation nycSubTableViewController
+
 @synthesize subMasterSource;
 
 - (id)initWithStyle:(UITableViewStyle)style

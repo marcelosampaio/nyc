@@ -9,9 +9,6 @@
 #import <UIKit/UIKit.h>
 
 
-@class nycSubTableViewController;
-
-
 @interface nycSubTableViewController : UITableViewController
 
 
