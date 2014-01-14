@@ -1,19 +1,20 @@
 //
-//  nycTableViewController.m
+//  nycSubTableViewController.m
 //  nyc
 //
 //  Created by Marcelo Sampaio on 1/13/14.
 //  Copyright (c) 2014 Marcelo Sampaio. All rights reserved.
 //
 
+#import "nycSubTableViewController.h"
 #import "nycTableViewController.h"
 
-@interface nycTableViewController ()
+@interface nycSubTableViewController ()
 
 @end
 
-@implementation nycTableViewController
-@synthesize nycSource;
+@implementation nycSubTableViewController
+@synthesize subMasterSource;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -27,9 +28,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // display input property
     [self loadSource];
+    NSLog(@"carreguei nycSubTableViewController com parametro de entrada = %@",self.detailItem);
     
-    NSLog(@"carreguei nycTableViewController com parametro = %@",self.detailItem);
+    
     
     
     // Uncomment the following line to preserve selection between presentations.
@@ -39,14 +42,10 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-
 -(void)loadSource
 {
-    self.nycSource=[[NSMutableArray alloc]initWithObjects:@"um",@"dois",@"tres", nil];
+    self.subMasterSource=[[NSMutableArray alloc]initWithObjects:@"teste1",@"teste2", nil];
 }
-
-
-
 
 
 - (void)didReceiveMemoryWarning
@@ -66,7 +65,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.nycSource count];
+    return [self.subMasterSource count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -75,8 +74,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    
-    cell.textLabel.text=[self.nycSource objectAtIndex:indexPath.row];
+    cell.textLabel.text=[self.subMasterSource objectAtIndex:indexPath.row];
     
     return cell;
 }

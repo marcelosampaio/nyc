@@ -1,5 +1,5 @@
 //
-//  nycTableViewController.h
+//  nycSubTableViewController.h
 //  nyc
 //
 //  Created by Marcelo Sampaio on 1/13/14.
@@ -8,13 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface nycTableViewController : UITableViewController
 
-// parameter from nycViewController
+@class nycSubTableViewController;
+
+
+@interface nycSubTableViewController : UITableViewController
+
+
+// parameter from nycSubTableViewController
 @property (strong, nonatomic) id detailItem;
 //-----------------------------------------
 
-@property NSMutableArray *nycSource;
-
+@property NSMutableArray *subMasterSource;
 
 @end
