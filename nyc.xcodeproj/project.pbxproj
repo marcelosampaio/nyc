@@ -26,6 +26,7 @@
 		9C4627F718833D9700A3DD6F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4627D618833D9600A3DD6F /* UIKit.framework */; };
 		9C4627FF18833D9700A3DD6F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C4627FD18833D9700A3DD6F /* InfoPlist.strings */; };
 		9C46280118833D9700A3DD6F /* nycTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C46280018833D9700A3DD6F /* nycTests.m */; };
+		9C7BF6081885D91F00AD6E4C /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7BF6071885D91F00AD6E4C /* detailViewController.m */; };
 		9CBDE80D1883751F001FA2B8 /* icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBDE7FA1883751F001FA2B8 /* icon-29.png */; };
 		9CBDE80E1883751F001FA2B8 /* icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBDE7FB1883751F001FA2B8 /* icon-29@2x.png */; };
 		9CBDE80F1883751F001FA2B8 /* icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBDE7FC1883751F001FA2B8 /* icon-57.png */; };
@@ -93,6 +94,8 @@
 		9C4627FC18833D9700A3DD6F /* nycTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "nycTests-Info.plist"; sourceTree = "<group>"; };
 		9C4627FE18833D9700A3DD6F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9C46280018833D9700A3DD6F /* nycTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = nycTests.m; sourceTree = "<group>"; };
+		9C7BF6061885D91F00AD6E4C /* detailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailViewController.h; sourceTree = "<group>"; };
+		9C7BF6071885D91F00AD6E4C /* detailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailViewController.m; sourceTree = "<group>"; };
 		9CBDE7FA1883751F001FA2B8 /* icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29.png"; sourceTree = "<group>"; };
 		9CBDE7FB1883751F001FA2B8 /* icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29@2x.png"; sourceTree = "<group>"; };
 		9CBDE7FC1883751F001FA2B8 /* icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-57.png"; sourceTree = "<group>"; };
@@ -200,6 +203,8 @@
 				9C3B51D218848A5300666371 /* nycTableViewController.m */,
 				9C3B51D41884A1FF00666371 /* nycSubTableViewController.h */,
 				9C3B51D51884A1FF00666371 /* nycSubTableViewController.m */,
+				9C7BF6061885D91F00AD6E4C /* detailViewController.h */,
+				9C7BF6071885D91F00AD6E4C /* detailViewController.m */,
 				9C4627ED18833D9600A3DD6F /* Images.xcassets */,
 				9C4627D918833D9600A3DD6F /* Supporting Files */,
 			);
@@ -408,6 +413,7 @@
 				9C3B51D61884A1FF00666371 /* nycSubTableViewController.m in Sources */,
 				9C3B51D318848A5300666371 /* nycTableViewController.m in Sources */,
 				9C4627E318833D9600A3DD6F /* AppDelegate.m in Sources */,
+				9C7BF6081885D91F00AD6E4C /* detailViewController.m in Sources */,
 				9C4627DF18833D9600A3DD6F /* main.m in Sources */,
 				9CE1F7451883422800395F4F /* infoViewController.m in Sources */,
 				9CBDE82B18843560001FA2B8 /* database.m in Sources */,
