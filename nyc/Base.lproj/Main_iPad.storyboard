@@ -105,7 +105,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="jDC-sq-j7n" kind="push" id="4gQ-TY-Jpg"/>
+                                    <segue destination="jDC-sq-j7n" kind="push" identifier="showDetail3" id="4gQ-TY-Jpg"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

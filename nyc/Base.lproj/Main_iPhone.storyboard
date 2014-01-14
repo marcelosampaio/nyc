@@ -105,7 +105,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="eH2-sL-XTd" kind="push" id="JBW-WZ-pna"/>
+                                    <segue destination="eH2-sL-XTd" kind="push" identifier="showDetail3" id="JBW-WZ-pna"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

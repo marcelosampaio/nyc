@@ -8,6 +8,7 @@
 
 #import "nycSubTableViewController.h"
 #import "nycTableViewController.h"
+#import "detailViewController.h"
 
 @interface nycSubTableViewController ()
 
@@ -80,6 +81,30 @@
     
     return cell;
 }
+
+
+// Passing nycTableViewController parameter
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        self.detailViewController.detailItem = self.detailItem;
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"showDetail3"]) {
+//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        [[segue destinationViewController] setDetailItem:self.detailItem];
+        
+    }
+}
+
+
+
+
+
+
 
 /*
 // Override to support conditional editing of the table view.

@@ -10,4 +10,12 @@
 
 @interface detailViewController : UIViewController
 
+
+
+// parameter from nycSubTableViewController
+@property (strong, nonatomic) id detailItem;
+//-----------------------------------------
+
+
+
 @end

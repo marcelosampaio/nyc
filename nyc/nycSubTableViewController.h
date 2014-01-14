@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class detailViewController;
 
 @interface nycSubTableViewController : UITableViewController
 
@@ -17,5 +18,7 @@
 //-----------------------------------------
 
 @property NSMutableArray *subMasterSource;
+
+@property (strong, nonatomic) detailViewController *detailViewController;
 
 @end

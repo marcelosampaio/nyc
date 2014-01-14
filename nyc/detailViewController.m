@@ -7,6 +7,7 @@
 //
 
 #import "detailViewController.h"
+#import "nycSubTableViewController.h"
 
 @interface detailViewController ()
 
@@ -28,6 +29,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.navigationItem.title=@"Detail Title";
+    
+    NSLog(@"detail com parametro=%@",self.detailItem);
 }
 
 - (void)didReceiveMemoryWarning
