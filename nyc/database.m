@@ -14,6 +14,9 @@
 
 @implementation database
 
+@synthesize masterTableViewIndex;
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -70,6 +73,44 @@
     if (!success) {
         NSAssert1(0, @"Failed to create writable database file with message '%@'.", [error localizedDescription]);
     }
+}
+
+// Carrega as letras iniciais para o indíce do tableView
+-(NSMutableDictionary *) loadIndex
+{
+    NSLog(@"inside loadIndex");
+
+    
+    
+    NSString *sql = [NSString stringWithFormat:@"select upper(substr(name,1,1)),count(*) from museum group by upper(substr(name,1,1))"];
+    NSMutableDictionary *parameters=[[NSMutableDictionary alloc]init];
+    
+    
+    sqlite3_stmt *statement;
+    if (sqlite3_prepare_v2(db, [sql UTF8String], -1, &statement, nil)==SQLITE_OK)
+    {
+        while(sqlite3_step(statement)==SQLITE_ROW)
+        {
+            NSLog(@"inside loadIndex loop");
+            
+            //Campo 1 - index Letter
+            char *field1 = (char *) sqlite3_column_text(statement, 0);
+            NSMutableString *field1Str = [[NSMutableString alloc] initWithUTF8String:field1];
+            
+            //Campo 2 - quantity of records per index letter
+            char *field2 = (char *) sqlite3_column_text(statement, 1);
+            NSMutableString *field2Str = [[NSMutableString alloc] initWithUTF8String:field2];
+
+            [parameters setValue:field2Str forKey:field1Str];
+            
+        }
+    }
+    else
+    {
+        NSLog(@"Erro ao ler indices do tableVIew");
+    }
+    
+    return parameters;
 }
 
 

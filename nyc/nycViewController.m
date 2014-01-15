@@ -21,6 +21,8 @@
 @synthesize nycSource;
 @synthesize brain=_brain;
 
+@synthesize masterTableViewIndex;
+
 //Lazy Instatiation de meu Model ------
 - (database *) brain
 {
@@ -53,6 +55,12 @@
     
     // open app database
     [self.brain openDB];
+    
+    //Retrieve the masterTableViewIndex
+    NSLog(@"viewController viewDidLoad");
+    self.masterTableViewIndex=[self.brain loadIndex];
+    
+    
     
     [self loadSource];
 

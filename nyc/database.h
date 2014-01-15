@@ -21,4 +21,16 @@
 //Método para copiar o banco de dados dos recursos para documentos
 -(void) verificaExistenciaECopiaBancoDeDadosGravavel;
 
+
+// Carrega as letras iniciais para o indíce do tableView
+-(NSMutableDictionary *) loadIndex;
+
+@property NSMutableDictionary *masterTableViewIndex;
+
+
+
+
+
+
+
 @end

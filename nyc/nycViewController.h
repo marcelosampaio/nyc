@@ -16,4 +16,7 @@
 
 @property (strong, nonatomic) nycTableViewController *nycTableViewController;
 
+// Retrieved from the database
+@property NSMutableDictionary *masterTableViewIndex;
+
 @end
