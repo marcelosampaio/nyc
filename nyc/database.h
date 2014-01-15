@@ -18,6 +18,7 @@
 // Método para abertura do banco de dados
 -(void) openDB;
 
--(NSString *) dbPath;
+//Método para copiar o banco de dados dos recursos para documentos
+-(void) verificaExistenciaECopiaBancoDeDadosGravavel;
 
 @end

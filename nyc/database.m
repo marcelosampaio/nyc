@@ -47,6 +47,31 @@
     return [[paths objectAtIndex:0] stringByAppendingPathComponent: @"nyc.db"];
 }
 
+//Método para copiar o banco de dados dos recursos para documentos
+-(void) verificaExistenciaECopiaBancoDeDadosGravavel;{
+    // Testa a existência de cópia editavel
+    BOOL success;
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"nyc.db"];
+    success = [fileManager fileExistsAtPath:writableDBPath];
+    if (success)
+    {
+        return;
+    }
+    
+    // The writable database does not exist, so copy the default to the appropriate location.
+    NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"nyc.db"];
+    
+    
+    success = [fileManager copyItemAtPath:defaultDBPath toPath:writableDBPath error:&error];
+    if (!success) {
+        NSAssert1(0, @"Failed to create writable database file with message '%@'.", [error localizedDescription]);
+    }
+}
+
 
 
 

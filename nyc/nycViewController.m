@@ -48,6 +48,9 @@
 {
     [super viewDidLoad];
     
+    //Cópia do banco de dados (apenas na primeira utilização) do Resource Folder para o Documents Folder para que possa ser manipulada.
+    [self.brain verificaExistenciaECopiaBancoDeDadosGravavel];
+    
     // open app database
     [self.brain openDB];
     
