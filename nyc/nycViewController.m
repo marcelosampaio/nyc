@@ -57,7 +57,6 @@
     [self.brain openDB];
     
     //Retrieve the masterTableViewIndex
-    NSLog(@"viewController viewDidLoad");
     self.masterTableViewIndex=[self.brain loadIndex];
     
     

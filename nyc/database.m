@@ -76,14 +76,10 @@
 }
 
 // Carrega as letras iniciais para o indíce do tableView
--(NSMutableDictionary *) loadIndex
+-(NSMutableArray *) loadIndex
 {
-    NSLog(@"inside loadIndex");
-
-    
-    
     NSString *sql = [NSString stringWithFormat:@"select upper(substr(name,1,1)),count(*) from museum group by upper(substr(name,1,1))"];
-    NSMutableDictionary *parameters=[[NSMutableDictionary alloc]init];
+    NSMutableArray *parameters=[[NSMutableArray alloc]init];
     
     
     sqlite3_stmt *statement;
@@ -91,8 +87,6 @@
     {
         while(sqlite3_step(statement)==SQLITE_ROW)
         {
-            NSLog(@"inside loadIndex loop");
-            
             //Campo 1 - index Letter
             char *field1 = (char *) sqlite3_column_text(statement, 0);
             NSMutableString *field1Str = [[NSMutableString alloc] initWithUTF8String:field1];
@@ -101,15 +95,15 @@
             char *field2 = (char *) sqlite3_column_text(statement, 1);
             NSMutableString *field2Str = [[NSMutableString alloc] initWithUTF8String:field2];
 
-            [parameters setValue:field2Str forKey:field1Str];
-            
+            NSMutableString *tempString = [NSMutableString stringWithFormat:@"%@",field1Str];[tempString appendFormat:@";"];[tempString appendFormat:@"%@",field2Str];
+            //Carrega o Array de Retorno com os resultados
+            [parameters addObject:tempString];
         }
     }
     else
     {
-        NSLog(@"Erro ao ler indices do tableVIew");
+        NSAssert(0,@"Error reading data to build index");
     }
-    
     return parameters;
 }
 
