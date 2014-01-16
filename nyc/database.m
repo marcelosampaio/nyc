@@ -78,26 +78,35 @@
 // Carrega as letras iniciais para o indíce do tableView
 -(NSMutableArray *)loadContentDependingOnMaster:(NSString *)master
 {
-    NSString *sql = [NSString stringWithFormat:@"select upper(substr(name,1,1)),count(*) from museum group by upper(substr(name,1,1))"];
-    NSMutableArray *parameters=[[NSMutableArray alloc]init];
+    NSString *sql=[[NSString alloc]init];
+    if ([master isEqualToString:@"Museum"])
+    {
+        // Use this snippet for index
+        // select upper(substr(name,1,1)),count(*) from museum group by upper(substr(name,1,1))
+        
+        sql = [NSString stringWithFormat:@"select name from museum order by name"];
+    }
     
+    NSMutableArray *parameters=[[NSMutableArray alloc]init];
     
     sqlite3_stmt *statement;
     if (sqlite3_prepare_v2(db, [sql UTF8String], -1, &statement, nil)==SQLITE_OK)
     {
         while(sqlite3_step(statement)==SQLITE_ROW)
         {
-            //Campo 1 - index Letter
+            //Campo 1 - Firs row of result set
+            // when "Museum" = name
             char *field1 = (char *) sqlite3_column_text(statement, 0);
             NSMutableString *field1Str = [[NSMutableString alloc] initWithUTF8String:field1];
+            [parameters addObject:field1Str];
             
-            //Campo 2 - quantity of records per index letter
-            char *field2 = (char *) sqlite3_column_text(statement, 1);
-            NSMutableString *field2Str = [[NSMutableString alloc] initWithUTF8String:field2];
-
-            NSMutableString *tempString = [NSMutableString stringWithFormat:@"%@",field1Str];[tempString appendFormat:@";"];[tempString appendFormat:@"%@",field2Str];
-            //Carrega o Array de Retorno com os resultados
-            [parameters addObject:tempString];
+//            //Campo 2 - quantity of records per index letter
+//            char *field2 = (char *) sqlite3_column_text(statement, 1);
+//            NSMutableString *field2Str = [[NSMutableString alloc] initWithUTF8String:field2];
+//
+//            NSMutableString *tempString = [NSMutableString stringWithFormat:@"%@",field1Str];[tempString appendFormat:@";"];[tempString appendFormat:@"%@",field2Str];
+//            //Carrega o Array de Retorno com os resultados
+//            [parameters addObject:tempString];
         }
     }
     else

@@ -106,8 +106,11 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"showDetail3"]) {
-//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        [[segue destinationViewController] setDetailItem:self.detailItem];
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        
+        NSMutableString *tempString=[NSMutableString stringWithFormat:@"%@",self.detailItem];[tempString appendString:@";"];[tempString appendFormat:@"%@",[self.subMasterSource objectAtIndex:indexPath.row]];
+
+        [[segue destinationViewController] setDetailItem:tempString];
         
     }
 }
