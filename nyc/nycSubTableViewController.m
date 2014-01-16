@@ -31,7 +31,7 @@
 {
     [super viewDidLoad];
     // display input property
-    [self loadSource];
+    [self loadSourceWithContent:self.detailItem];
     self.navigationItem.title=self.detailItem;
     NSLog(@"carreguei nycSubTableViewController com parametro de entrada = %@",self.detailItem);
     
@@ -45,8 +45,28 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
--(void)loadSource
+-(void)loadSourceWithContent:(NSString *)content
 {
+    
+    if ([content isEqualToString:@"Busisness"])
+    {
+        NSLog(@"carregando subMasterTableView para business");
+    }
+    else if ([content isEqualToString:@"Recreation"])
+    {
+        NSLog(@"carregando subMasterTableView para recreation");
+    }
+    else if ([content isEqualToString:@"Social"])
+    {
+        NSLog(@"carregando subMasterTableView para social");
+    }
+    else if ([content isEqualToString:@"Transports"])
+    {
+        NSLog(@"carregando subMasterTableView para transports");
+    }
+    
+    
+    
     self.subMasterSource=[[NSMutableArray alloc]initWithObjects:@"teste1",@"teste2",@"teste3",@"teste4",@"teste5",@"teste6",@"teste7",@"teste8",@"teste9",@"teste10", nil];
 }
 
