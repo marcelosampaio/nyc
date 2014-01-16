@@ -46,7 +46,21 @@
 
 -(void)loadSource
 {
-    self.nycSource=[[NSMutableArray alloc]initWithObjects:@"um",@"dois",@"tres", nil];
+    if ([self.detailItem isEqualToString:@"Business"]) {
+        self.nycSource=[[NSMutableArray alloc]initWithObjects:@"Sidewalk Cafes",@"Eletronic Stores", nil];
+    }
+    else if ([self.detailItem isEqualToString:@"Recreation"])
+    {
+        self.nycSource=[[NSMutableArray alloc]initWithObjects:@"Museum",@"Theater", nil];
+    }
+    else if ([self.detailItem isEqualToString:@"Social"])
+    {
+        self.nycSource=[[NSMutableArray alloc]initWithObjects:@"After School",@"WiFi HotSpots", nil];
+    }
+    else if ([self.detailItem isEqualToString:@"Transports"])
+    {
+        self.nycSource=[[NSMutableArray alloc]initWithObjects:@"Subway", nil];
+    }
 }
 
 
