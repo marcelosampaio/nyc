@@ -23,7 +23,7 @@
 
 
 // Carrega as letras iniciais para o indíce do tableView
--(NSMutableArray *) loadIndex;
+-(NSMutableArray *)loadContentDependingOnMaster:(NSString *)master;
 
 @property NSMutableDictionary *masterTableViewIndex;
 

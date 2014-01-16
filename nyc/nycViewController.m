@@ -21,8 +21,6 @@
 @synthesize nycSource;
 @synthesize brain=_brain;
 
-@synthesize masterTableViewIndex;
-
 //Lazy Instatiation de meu Model ------
 - (database *) brain
 {
@@ -52,14 +50,6 @@
     
     //Cópia do banco de dados (apenas na primeira utilização) do Resource Folder para o Documents Folder para que possa ser manipulada.
     [self.brain verificaExistenciaECopiaBancoDeDadosGravavel];
-    
-    // open app database
-    [self.brain openDB];
-    
-    //Retrieve the masterTableViewIndex
-    self.masterTableViewIndex=[self.brain loadIndex];
-    
-    
     
     [self loadSource];
 

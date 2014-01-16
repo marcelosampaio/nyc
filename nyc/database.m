@@ -76,7 +76,7 @@
 }
 
 // Carrega as letras iniciais para o indíce do tableView
--(NSMutableArray *) loadIndex
+-(NSMutableArray *)loadContentDependingOnMaster:(NSString *)master
 {
     NSString *sql = [NSString stringWithFormat:@"select upper(substr(name,1,1)),count(*) from museum group by upper(substr(name,1,1))"];
     NSMutableArray *parameters=[[NSMutableArray alloc]init];

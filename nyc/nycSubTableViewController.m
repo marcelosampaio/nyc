@@ -9,14 +9,29 @@
 #import "nycSubTableViewController.h"
 #import "nycTableViewController.h"
 #import "detailViewController.h"
+#import "database.h"
 
 @interface nycSubTableViewController ()
+
+@property (nonatomic,strong) database *brain;
 
 @end
 
 @implementation nycSubTableViewController
 
 @synthesize subMasterSource;
+@synthesize brain=_brain;
+
+//Lazy Instatiation de meu Model ------
+- (database *) brain
+{
+    if(!_brain)
+    {
+        _brain = [[database alloc] init];
+    }
+    return _brain;
+}
+// -------------- end of lazy instatiation
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -30,11 +45,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // display input property
-    [self loadSourceWithContent:self.detailItem];
-    self.navigationItem.title=self.detailItem;
-    NSLog(@"carreguei nycSubTableViewController com parametro de entrada = %@",self.detailItem);
+    // open app database
+    [self.brain openDB];
     
+    // display input property
+    self.navigationItem.title=self.detailItem;
+    
+    // load source
+    self.subMasterSource=[self.brain loadContentDependingOnMaster:self.detailItem];
     
     
     
@@ -44,32 +62,6 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-
--(void)loadSourceWithContent:(NSString *)content
-{
-    
-    if ([content isEqualToString:@"Busisness"])
-    {
-        NSLog(@"carregando subMasterTableView para business");
-    }
-    else if ([content isEqualToString:@"Recreation"])
-    {
-        NSLog(@"carregando subMasterTableView para recreation");
-    }
-    else if ([content isEqualToString:@"Social"])
-    {
-        NSLog(@"carregando subMasterTableView para social");
-    }
-    else if ([content isEqualToString:@"Transports"])
-    {
-        NSLog(@"carregando subMasterTableView para transports");
-    }
-    
-    
-    
-    self.subMasterSource=[[NSMutableArray alloc]initWithObjects:@"teste1",@"teste2",@"teste3",@"teste4",@"teste5",@"teste6",@"teste7",@"teste8",@"teste9",@"teste10", nil];
-}
-
 
 - (void)didReceiveMemoryWarning
 {
