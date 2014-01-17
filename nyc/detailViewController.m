@@ -80,19 +80,122 @@
     // get all rows
     NSArray *row = [self.detailItem componentsSeparatedByString:@";"];
     NSString *name=[NSString stringWithFormat:@"%@",[row objectAtIndex:1]];
+    NSString *phone=[NSString stringWithFormat:@"%@",[row objectAtIndex:2]];
+    NSString *url=[NSString stringWithFormat:@"%@",[row objectAtIndex:3]];
+    NSString *address1=[NSString stringWithFormat:@"%@",[row objectAtIndex:4]];
+    NSString *address2=[NSString stringWithFormat:@"%@",[row objectAtIndex:5]];
+    NSString *city=[NSString stringWithFormat:@"%@",[row objectAtIndex:6]];
     
     // content 1
+    // Master icon
+    
+    UIImageView *masterIcon = [[UIImageView alloc] initWithFrame:CGRectMake((self.view.bounds.size.width/2)-14, 20, 28, 25)];
+    masterIcon.image = [UIImage imageNamed:@"recreation.png"];
+    [self.scroll addSubview:masterIcon];
+    // end of content 1
+  
+    // content 2
     // Header with Museum name
-    UILabel *msg=[[UILabel alloc]initWithFrame:CGRectMake(1, 20, 320, 25)];
+    UILabel *msg=[[UILabel alloc]initWithFrame:CGRectMake(1, 50, 320, 50)];
     
     msg.text=[NSString stringWithFormat:@"%@",name];
     msg.textAlignment=NSTextAlignmentCenter;
     msg.textColor=[UIColor blackColor];
+    msg.lineBreakMode=NSLineBreakByWordWrapping;
+    msg.numberOfLines=2;
+    msg.font=[UIFont boldSystemFontOfSize:17];
     
     [self.scroll addSubview:msg];
     
-    // end of content 1
+    // end of content 2
 
+    
+    // content 3
+    // Phone number
+    UILabel *msg2=[[UILabel alloc]initWithFrame:CGRectMake(1, 120, 320, 25)];
+    
+    msg2.text=[NSString stringWithFormat:@"%@",phone];
+    msg2.textAlignment=NSTextAlignmentCenter;
+    msg2.textColor=[UIColor darkGrayColor];
+
+    
+    [self.scroll addSubview:msg2];
+    
+    // end of content 3
+
+    
+    // content 4
+    // URL
+    UILabel *msg3=[[UILabel alloc]initWithFrame:CGRectMake(1, 150, 320, 50)];
+    
+    msg3.text=[NSString stringWithFormat:@"%@",url];
+    msg3.textAlignment=NSTextAlignmentCenter;
+    msg3.textColor=[UIColor blueColor];
+    msg3.lineBreakMode=NSLineBreakByWordWrapping;
+    msg3.numberOfLines=2;
+    msg3.alpha=0.45f;
+    
+    
+    [self.scroll addSubview:msg3];
+    
+    // end of content 4
+    
+    int lineFeeder=210;
+    
+    // content 5
+    // Address 1
+    UILabel *msg4=[[UILabel alloc]initWithFrame:CGRectMake(1, lineFeeder, 320, 50)];
+    
+    msg4.text=[NSString stringWithFormat:@"%@",address1];
+    msg4.textAlignment=NSTextAlignmentCenter;
+    msg4.textColor=[UIColor darkGrayColor];
+    msg4.lineBreakMode=NSLineBreakByWordWrapping;
+    msg4.numberOfLines=2;
+
+
+    
+    [self.scroll addSubview:msg4];
+    
+    // end of content 5
+    
+    // calculate line feeder
+    
+    if ([address2 isEqualToString:@" "]) {
+        lineFeeder=lineFeeder+20;
+    }
+    else
+    {
+        lineFeeder=lineFeeder+30;
+    }
+    
+    // content 6
+    // Address 2
+    UILabel *msg5=[[UILabel alloc]initWithFrame:CGRectMake(1, lineFeeder, 320, 25)];
+    
+    msg5.text=[NSString stringWithFormat:@"%@",address2];
+    msg5.textAlignment=NSTextAlignmentCenter;
+    msg5.textColor=[UIColor darkGrayColor];
+    
+    
+    [self.scroll addSubview:msg5];
+    
+    // end of content 6
+    
+    
+    lineFeeder=lineFeeder+25;
+    
+    // content 7
+    // City
+    UILabel *msg6=[[UILabel alloc]initWithFrame:CGRectMake(1, lineFeeder, 320, 25)];
+    
+    msg6.text=[NSString stringWithFormat:@"%@",city];
+    msg6.textAlignment=NSTextAlignmentCenter;
+    msg6.textColor=[UIColor darkGrayColor];
+    
+    
+    [self.scroll addSubview:msg6];
+    
+    // end of content 7
 }
 
 
