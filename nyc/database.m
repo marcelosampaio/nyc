@@ -84,21 +84,63 @@
         // Use this snippet for index
         // select upper(substr(name,1,1)),count(*) from museum group by upper(substr(name,1,1))
         
-        sql = [NSString stringWithFormat:@"select name from museum order by name"];
+        sql = [NSString stringWithFormat:@"select name,phone,url,address1,address2,city,zip from museum order by name"];
     }
     
     NSMutableArray *parameters=[[NSMutableArray alloc]init];
+    NSMutableString *tempString=[[NSMutableString alloc]init];
     
     sqlite3_stmt *statement;
     if (sqlite3_prepare_v2(db, [sql UTF8String], -1, &statement, nil)==SQLITE_OK)
     {
         while(sqlite3_step(statement)==SQLITE_ROW)
         {
-            //Campo 1 - Firs row of result set
             // when "Museum" = name
-            char *field1 = (char *) sqlite3_column_text(statement, 0);
-            NSMutableString *field1Str = [[NSMutableString alloc] initWithUTF8String:field1];
-            [parameters addObject:field1Str];
+            //  0  = name
+            //  1  = phone
+            //  2  = url
+            //  3  = address1
+            //  4  = address2
+            //  5  = city
+            //  6  = zip code
+            if ([master isEqualToString:@"Museum"])
+            {
+                // name
+                char *field00 = (char *) sqlite3_column_text(statement, 0);
+                NSMutableString *field00Str = [[NSMutableString alloc] initWithUTF8String:field00];
+                // phone number
+                char *field01= (char *) sqlite3_column_text(statement, 1);
+                NSMutableString *field01Str = [[NSMutableString alloc] initWithUTF8String:field01];
+                // URL
+                char *field02= (char *) sqlite3_column_text(statement, 2);
+                NSMutableString *field02Str = [[NSMutableString alloc] initWithUTF8String:field02];
+                // Address1
+                char *field03= (char *) sqlite3_column_text(statement, 3);
+                NSMutableString *field03Str = [[NSMutableString alloc] initWithUTF8String:field03];
+                // Address2
+                char *field04= (char *) sqlite3_column_text(statement, 4);
+                NSMutableString *field04Str = [[NSMutableString alloc] initWithUTF8String:field04];
+                // City
+                char *field05= (char *) sqlite3_column_text(statement, 5);
+                NSMutableString *field05Str = [[NSMutableString alloc] initWithUTF8String:field05];
+                // ZIP Code
+                char *field06= (char *) sqlite3_column_text(statement, 6);
+                NSMutableString *field06Str = [[NSMutableString alloc] initWithUTF8String:field06];
+                
+                
+                tempString=[NSMutableString stringWithFormat:@"%@",field00Str];[tempString appendString:@";"];[tempString appendFormat:@"%@",field01Str];[tempString appendString:@";"];[tempString appendFormat:@"%@",field02Str];[tempString appendString:@";"];[tempString appendFormat:@"%@",field03Str];[tempString appendString:@";"];[tempString appendFormat:@"%@",field04Str];[tempString appendString:@";"];[tempString appendFormat:@"%@",field05Str];[tempString appendString:@";"];[tempString appendFormat:@"%@",field06Str];
+
+                
+                [parameters addObject:tempString];
+                
+                
+                
+            }
+            
+            
+            
+            
+
             
 //            //Campo 2 - quantity of records per index letter
 //            char *field2 = (char *) sqlite3_column_text(statement, 1);

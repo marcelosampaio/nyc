@@ -32,9 +32,6 @@
 }
 // -------------- end of lazy instatiation
 
-
-
-
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -106,9 +103,7 @@
         default:
             cell.imageView.image=[UIImage imageNamed:@"transportation.png"];
             break;
-            
     }
-    
     return cell;
 }
 
@@ -129,13 +124,6 @@
         
     }
 }
-
-
-
-
-
-
-
 
 
 
