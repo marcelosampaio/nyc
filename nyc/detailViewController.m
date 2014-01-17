@@ -85,6 +85,7 @@
     NSString *address1=[NSString stringWithFormat:@"%@",[row objectAtIndex:4]];
     NSString *address2=[NSString stringWithFormat:@"%@",[row objectAtIndex:5]];
     NSString *city=[NSString stringWithFormat:@"%@",[row objectAtIndex:6]];
+    NSString *zipCode=[NSString stringWithFormat:@"%@",[row objectAtIndex:7]];
     
     // content 1
     // Master icon
@@ -195,7 +196,27 @@
     
     [self.scroll addSubview:msg6];
     
+    // end of content 8
+
+    lineFeeder=lineFeeder+25;
+    
+    // content 8
+    // Zip Code
+    UILabel *msg7=[[UILabel alloc]initWithFrame:CGRectMake(1, lineFeeder, 320, 25)];
+    
+    msg7.text=[NSString stringWithFormat:@"%@",zipCode];
+    msg7.textAlignment=NSTextAlignmentCenter;
+    msg7.textColor=[UIColor darkGrayColor];
+    
+    
+    [self.scroll addSubview:msg7];
+    
     // end of content 7
+
+
+
+
+
 }
 
 
