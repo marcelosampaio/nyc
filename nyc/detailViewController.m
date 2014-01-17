@@ -40,8 +40,16 @@
 
 -(void)scrollInitialization
 {
+
     self.scroll.scrollEnabled=YES;
     self.scroll.contentSize=CGSizeMake(320, 3000);
+
+    // Verify Master origin
+    NSArray *row = [self.detailItem componentsSeparatedByString:@";"];
+    NSString *origin=[NSString stringWithFormat:@"%@",[row objectAtIndex:0]];
+    [self formatLayOutFromMaster:origin];
+    
+    
     // Loop para injetar varios labels para ocupar a altura de 3000
     
     for (int i=20; i<3000; i=i+20) {
@@ -52,12 +60,20 @@
         
         
         
+        
         [self.scroll addSubview:msg];
     }
     
 
 }
 
+-(void)formatLayOutFromMaster:(NSString *)master
+{
+    if ([master isEqualToString:@"Museum"])
+    {
+        NSLog(@"formatando museum no layout");
+    }
+}
 
 - (void)didReceiveMemoryWarning
 {
