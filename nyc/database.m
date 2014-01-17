@@ -130,11 +130,10 @@
                 
                 tempString=[NSMutableString stringWithFormat:@"%@",field00Str];[tempString appendString:@";"];[tempString appendFormat:@"%@",field01Str];[tempString appendString:@";"];[tempString appendFormat:@"%@",field02Str];[tempString appendString:@";"];[tempString appendFormat:@"%@",field03Str];[tempString appendString:@";"];[tempString appendFormat:@"%@",field04Str];[tempString appendString:@";"];[tempString appendFormat:@"%@",field05Str];[tempString appendString:@";"];[tempString appendFormat:@"%@",field06Str];
 
+                NSLog(@"checkpoint problemas no push");
                 
                 [parameters addObject:tempString];
-                
-                
-                
+
             }
             
             
