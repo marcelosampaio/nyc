@@ -33,7 +33,7 @@
     [self scrollInitialization];
     
     
-    self.navigationItem.title=@"Detail Title";
+//    self.navigationItem.title=@"Detail Title";
     
     NSLog(@"detail com parametro=%@",self.detailItem);
 }
@@ -44,10 +44,14 @@
     self.scroll.contentSize=CGSizeMake(320, 3000);
     // Loop para injetar varios labels para ocupar a altura de 3000
     
-    for (int i=15; i<3000; i=i+15) {
-        UILabel *msg=[[UILabel alloc]initWithFrame:CGRectMake(self.view.bounds.size.width/2, i, 100, 20)];
-        msg.text=[NSString stringWithFormat:@"%d",i];
-        msg.textAlignment=NSTextAlignmentRight;
+    for (int i=20; i<3000; i=i+20) {
+        UILabel *msg=[[UILabel alloc]initWithFrame:CGRectMake(1, i, 320, 25)];
+        msg.text=[NSString stringWithFormat:@"Jerusalem Museum"];
+        msg.textAlignment=NSTextAlignmentCenter;
+        msg.textColor=[UIColor blackColor];
+        
+        
+        
         [self.scroll addSubview:msg];
     }
     

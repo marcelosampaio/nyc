@@ -120,7 +120,7 @@
             </objects>
             <point key="canvasLocation" x="1107" y="-768"/>
         </scene>
-        <!--Detail View Controller - Detail-->
+        <!--Detail View Controller-->
         <scene sceneID="6MW-VX-7Nd">
             <objects>
                 <viewController id="eH2-sL-XTd" customClass="detailViewController" sceneMemberID="viewController">
@@ -139,7 +139,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Detail" id="Vtg-wW-cKl"/>
+                    <navigationItem key="navigationItem" id="Vtg-wW-cKl"/>
                     <connections>
                         <outlet property="scroll" destination="pbY-wP-xUE" id="ahF-PK-DGI"/>
                     </connections>
