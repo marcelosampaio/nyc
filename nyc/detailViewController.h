@@ -10,6 +10,7 @@
 
 @interface detailViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scroll;
 
 
 // parameter from nycSubTableViewController
