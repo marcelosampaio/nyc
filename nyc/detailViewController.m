@@ -52,17 +52,17 @@
     
     // Loop para injetar varios labels para ocupar a altura de 3000
     
-    for (int i=20; i<3000; i=i+20) {
-        UILabel *msg=[[UILabel alloc]initWithFrame:CGRectMake(1, i, 320, 25)];
-        msg.text=[NSString stringWithFormat:@"Jerusalem Museum"];
-        msg.textAlignment=NSTextAlignmentCenter;
-        msg.textColor=[UIColor blackColor];
-        
-        
-        
-        
-        [self.scroll addSubview:msg];
-    }
+//    for (int i=20; i<3000; i=i+20) {
+//        UILabel *msg=[[UILabel alloc]initWithFrame:CGRectMake(1, i, 320, 25)];
+//        msg.text=[NSString stringWithFormat:@"Jerusalem Museum"];
+//        msg.textAlignment=NSTextAlignmentCenter;
+//        msg.textColor=[UIColor blackColor];
+//        
+//        
+//        
+//        
+//        [self.scroll addSubview:msg];
+//    }
     
 
 }
@@ -71,9 +71,30 @@
 {
     if ([master isEqualToString:@"Museum"])
     {
-        NSLog(@"formatando museum no layout");
+        [self formatMuseumLayOut];
     }
 }
+
+-(void)formatMuseumLayOut
+{
+    // get all rows
+    NSArray *row = [self.detailItem componentsSeparatedByString:@";"];
+    NSString *name=[NSString stringWithFormat:@"%@",[row objectAtIndex:1]];
+    
+    // content 1
+    // Header with Museum name
+    UILabel *msg=[[UILabel alloc]initWithFrame:CGRectMake(1, 20, 320, 25)];
+    
+    msg.text=[NSString stringWithFormat:@"%@",name];
+    msg.textAlignment=NSTextAlignmentCenter;
+    msg.textColor=[UIColor blackColor];
+    
+    [self.scroll addSubview:msg];
+    
+    // end of content 1
+
+}
+
 
 - (void)didReceiveMemoryWarning
 {
