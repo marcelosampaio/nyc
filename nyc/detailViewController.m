@@ -57,11 +57,11 @@
 {
     if ([master isEqualToString:@"Museum"]||[master isEqualToString:@"Theater"])
     {
-        [self formatMuseumLayOut];
+        [self formatMuseumAndTheaterLayOut];
     }
 }
 
--(void)formatMuseumLayOut
+-(void)formatMuseumAndTheaterLayOut
 {
     bool iPhoneDevice=[self deviceRecognition];
     int deviceWidth=320;
