@@ -33,8 +33,6 @@
     [self loadSource];
     self.navigationItem.title=self.detailItem;
 
-    NSLog(@"carreguei nycTableViewController com parametro = %@",self.detailItem);
-    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

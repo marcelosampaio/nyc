@@ -34,8 +34,6 @@
     
     
 //    self.navigationItem.title=@"Detail Title";
-    
-    NSLog(@"detail com parametro=%@",self.detailItem);
 }
 
 -(void)scrollInitialization
