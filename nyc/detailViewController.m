@@ -32,15 +32,14 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self scrollInitialization];
-    
-    
+
 //    self.navigationItem.title=@"Detail Title";
 }
 
 -(void)scrollInitialization
 {
     float scrollHeight=self.view.frame.size.height;
-    if ([self.detailItem isEqualToString:@"Museum"]) {
+    if ([self.detailItem isEqualToString:@"Museum"]||[self.detailItem isEqualToString:@"Theater"]) {
         scrollHeight=scrollHeight+30;
     }
     self.scroll.scrollEnabled=YES;
@@ -49,13 +48,14 @@
     // Verify Master origin
     NSArray *row = [self.detailItem componentsSeparatedByString:@";"];
     NSString *origin=[NSString stringWithFormat:@"%@",[row objectAtIndex:0]];
+    
     [self formatLayOutFromMaster:origin];
     
 }
 
 -(void)formatLayOutFromMaster:(NSString *)master
 {
-    if ([master isEqualToString:@"Museum"])
+    if ([master isEqualToString:@"Museum"]||[master isEqualToString:@"Theater"])
     {
         [self formatMuseumLayOut];
     }

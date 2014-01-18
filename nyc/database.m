@@ -86,6 +86,10 @@
         
         sql = [NSString stringWithFormat:@"select name,phone,url,address1,address2,city,zip from museum order by name"];
     }
+    else if ([master isEqualToString:@"Theater"])
+    {
+        sql = [NSString stringWithFormat:@"select phone,name,url,address1,address2,city,zip from theater order by name"];
+    }
     
     NSMutableArray *parameters=[[NSMutableArray alloc]init];
     NSMutableString *tempString=[[NSMutableString alloc]init];
@@ -103,7 +107,7 @@
             //  4  = address2
             //  5  = city
             //  6  = zip code
-            if ([master isEqualToString:@"Museum"])
+            if ([master isEqualToString:@"Museum"]||[master isEqualToString:@"Theater"])
             {
                 // name
                 char *field00 = (char *) sqlite3_column_text(statement, 0);
@@ -133,10 +137,6 @@
                 [parameters addObject:tempString];
 
             }
-            
-            
-            
-            
 
             
 //            //Campo 2 - quantity of records per index letter

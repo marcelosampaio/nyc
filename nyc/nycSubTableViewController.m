@@ -55,7 +55,6 @@
     self.subMasterSource=[self.brain loadContentDependingOnMaster:self.detailItem];
     
     
-    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -121,7 +120,7 @@
         NSMutableString *tempString=[NSMutableString stringWithFormat:@"%@",self.detailItem];[tempString appendString:@";"];[tempString appendFormat:@"%@",[self.subMasterSource objectAtIndex:indexPath.row]];
 
         [[segue destinationViewController] setDetailItem:tempString];
-        
+
     }
 }
 
