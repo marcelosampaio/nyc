@@ -89,6 +89,7 @@
     
     // content 1
     // Master icon
+
     
     UIImageView *masterIcon = [[UIImageView alloc] initWithFrame:CGRectMake((self.view.bounds.size.width/2)-14, 20, 28, 25)];
     masterIcon.image = [UIImage imageNamed:@"recreation.png"];
@@ -127,13 +128,13 @@
     
     // content 4
     // URL
-    UILabel *msg3=[[UILabel alloc]initWithFrame:CGRectMake(1, 150, 320, 50)];
+    UILabel *msg3=[[UILabel alloc]initWithFrame:CGRectMake(1, 150, 320, 70)];
     
     msg3.text=[NSString stringWithFormat:@"%@",url];
     msg3.textAlignment=NSTextAlignmentCenter;
     msg3.textColor=[UIColor blueColor];
     msg3.lineBreakMode=NSLineBreakByWordWrapping;
-    msg3.numberOfLines=2;
+    msg3.numberOfLines=3;
     msg3.alpha=0.45f;
     
     
@@ -141,7 +142,7 @@
     
     // end of content 4
     
-    int lineFeeder=210;
+    int lineFeeder=260;
     
     // content 5
     // Address 1

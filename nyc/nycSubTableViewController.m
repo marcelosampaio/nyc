@@ -89,7 +89,17 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.textLabel.text=[self.subMasterSource objectAtIndex:indexPath.row];
+    // get all rows
+    NSArray *row = [[self.subMasterSource objectAtIndex:indexPath.row] componentsSeparatedByString:@";"];
+    NSString *name=[NSString stringWithFormat:@"%@",[row objectAtIndex:0]];
+//    NSString *phone=[NSString stringWithFormat:@"%@",[row objectAtIndex:1]];
+//    NSString *url=[NSString stringWithFormat:@"%@",[row objectAtIndex:2]];
+//    NSString *address1=[NSString stringWithFormat:@"%@",[row objectAtIndex:3]];
+//    NSString *address2=[NSString stringWithFormat:@"%@",[row objectAtIndex:4]];
+//    NSString *city=[NSString stringWithFormat:@"%@",[row objectAtIndex:5]];
+//    NSString *zipCode=[NSString stringWithFormat:@"%@",[row objectAtIndex:6]];
+    
+    cell.textLabel.text=name;
     
     return cell;
 }
