@@ -17,6 +17,7 @@
 
 @synthesize scroll;
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -38,31 +39,18 @@
 
 -(void)scrollInitialization
 {
-
+    float scrollHeight=self.view.frame.size.height;
+    if ([self.detailItem isEqualToString:@"Museum"]) {
+        scrollHeight=scrollHeight+30;
+    }
     self.scroll.scrollEnabled=YES;
-    self.scroll.contentSize=CGSizeMake(320, 3000);
+    self.scroll.contentSize=CGSizeMake(320, scrollHeight);
 
     // Verify Master origin
     NSArray *row = [self.detailItem componentsSeparatedByString:@";"];
     NSString *origin=[NSString stringWithFormat:@"%@",[row objectAtIndex:0]];
     [self formatLayOutFromMaster:origin];
     
-    
-    // Loop para injetar varios labels para ocupar a altura de 3000
-    
-//    for (int i=20; i<3000; i=i+20) {
-//        UILabel *msg=[[UILabel alloc]initWithFrame:CGRectMake(1, i, 320, 25)];
-//        msg.text=[NSString stringWithFormat:@"Jerusalem Museum"];
-//        msg.textAlignment=NSTextAlignmentCenter;
-//        msg.textColor=[UIColor blackColor];
-//        
-//        
-//        
-//        
-//        [self.scroll addSubview:msg];
-//    }
-    
-
 }
 
 -(void)formatLayOutFromMaster:(NSString *)master
@@ -76,7 +64,13 @@
 -(void)formatMuseumLayOut
 {
     bool iPhoneDevice=[self deviceRecognition];
-
+    int deviceWidth=320;
+    if (iPhoneDevice) {
+        deviceWidth=320;
+    }else{
+        deviceWidth=768;
+    }
+    
     // get all rows
     NSArray *row = [self.detailItem componentsSeparatedByString:@";"];
     NSString *name=[NSString stringWithFormat:@"%@",[row objectAtIndex:1]];
@@ -98,7 +92,7 @@
   
     // content 2
     // Header with Museum name
-    UILabel *msg=[[UILabel alloc]initWithFrame:CGRectMake(1, 50, 320, 50)];
+    UILabel *msg=[[UILabel alloc]initWithFrame:CGRectMake(1, 50, deviceWidth, 50)];
     
     msg.text=[NSString stringWithFormat:@"%@",name];
     msg.textAlignment=NSTextAlignmentCenter;
@@ -114,7 +108,7 @@
     
     // content 3
     // Phone number
-    UILabel *msg2=[[UILabel alloc]initWithFrame:CGRectMake(1, 120, 320, 25)];
+    UILabel *msg2=[[UILabel alloc]initWithFrame:CGRectMake(1, 120, deviceWidth, 25)];
     
     msg2.text=[NSString stringWithFormat:@"%@",phone];
     msg2.textAlignment=NSTextAlignmentCenter;
@@ -128,7 +122,7 @@
     
     // content 4
     // URL
-    UILabel *msg3=[[UILabel alloc]initWithFrame:CGRectMake(1, 150, 320, 70)];
+    UILabel *msg3=[[UILabel alloc]initWithFrame:CGRectMake(1, 150, deviceWidth, 70)];
     
     msg3.text=[NSString stringWithFormat:@"%@",url];
     msg3.textAlignment=NSTextAlignmentCenter;
@@ -146,7 +140,7 @@
     
     // content 5
     // Address 1
-    UILabel *msg4=[[UILabel alloc]initWithFrame:CGRectMake(1, lineFeeder, 320, 50)];
+    UILabel *msg4=[[UILabel alloc]initWithFrame:CGRectMake(1, lineFeeder, deviceWidth, 50)];
     
     msg4.text=[NSString stringWithFormat:@"%@",address1];
     msg4.textAlignment=NSTextAlignmentCenter;
@@ -172,7 +166,7 @@
     
     // content 6
     // Address 2
-    UILabel *msg5=[[UILabel alloc]initWithFrame:CGRectMake(1, lineFeeder, 320, 50)];
+    UILabel *msg5=[[UILabel alloc]initWithFrame:CGRectMake(1, lineFeeder, deviceWidth, 50)];
     
     msg5.text=[NSString stringWithFormat:@"%@",address2];
     msg5.textAlignment=NSTextAlignmentCenter;
@@ -189,7 +183,7 @@
     
     // content 7
     // City
-    UILabel *msg6=[[UILabel alloc]initWithFrame:CGRectMake(1, lineFeeder, 320, 25)];
+    UILabel *msg6=[[UILabel alloc]initWithFrame:CGRectMake(1, lineFeeder, deviceWidth, 25)];
     
     msg6.text=[NSString stringWithFormat:@"%@",city];
     msg6.textAlignment=NSTextAlignmentCenter;
@@ -204,7 +198,7 @@
     
     // content 8
     // Zip Code
-    UILabel *msg7=[[UILabel alloc]initWithFrame:CGRectMake(1, lineFeeder, 320, 25)];
+    UILabel *msg7=[[UILabel alloc]initWithFrame:CGRectMake(1, lineFeeder, deviceWidth, 25)];
     
     msg7.text=[NSString stringWithFormat:@"%@",zipCode];
     msg7.textAlignment=NSTextAlignmentCenter;
