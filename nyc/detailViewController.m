@@ -75,6 +75,8 @@
 
 -(void)formatMuseumLayOut
 {
+    bool iPhoneDevice=[self deviceRecognition];
+
     // get all rows
     NSArray *row = [self.detailItem componentsSeparatedByString:@";"];
     NSString *name=[NSString stringWithFormat:@"%@",[row objectAtIndex:1]];
@@ -219,6 +221,17 @@
 
 }
 
+-(BOOL)deviceRecognition
+{
+    BOOL iPhoneDevice=YES;
+    //device recognition
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        iPhoneDevice=NO;
+    }else if (([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)) {
+        iPhoneDevice=YES;
+    }
+    return iPhoneDevice;
+}
 
 - (void)didReceiveMemoryWarning
 {
