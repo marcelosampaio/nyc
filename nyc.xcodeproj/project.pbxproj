@@ -27,7 +27,7 @@
 		9C4627FF18833D9700A3DD6F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C4627FD18833D9700A3DD6F /* InfoPlist.strings */; };
 		9C46280118833D9700A3DD6F /* nycTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C46280018833D9700A3DD6F /* nycTests.m */; };
 		9C7BF6081885D91F00AD6E4C /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7BF6071885D91F00AD6E4C /* detailViewController.m */; };
-		9C7D90CD188AF85700F4C6DF /* nyc.db in Resources */ = {isa = PBXBuildFile; fileRef = 9C7D90CC188AF85700F4C6DF /* nyc.db */; };
+		9C7D90CF188B02CC00F4C6DF /* nyc.db in Resources */ = {isa = PBXBuildFile; fileRef = 9C7D90CE188B02CC00F4C6DF /* nyc.db */; };
 		9CBDE80D1883751F001FA2B8 /* icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBDE7FA1883751F001FA2B8 /* icon-29.png */; };
 		9CBDE80E1883751F001FA2B8 /* icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBDE7FB1883751F001FA2B8 /* icon-29@2x.png */; };
 		9CBDE80F1883751F001FA2B8 /* icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBDE7FC1883751F001FA2B8 /* icon-57.png */; };
@@ -96,7 +96,7 @@
 		9C46280018833D9700A3DD6F /* nycTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = nycTests.m; sourceTree = "<group>"; };
 		9C7BF6061885D91F00AD6E4C /* detailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailViewController.h; sourceTree = "<group>"; };
 		9C7BF6071885D91F00AD6E4C /* detailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailViewController.m; sourceTree = "<group>"; };
-		9C7D90CC188AF85700F4C6DF /* nyc.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = nyc.db; sourceTree = "<group>"; };
+		9C7D90CE188B02CC00F4C6DF /* nyc.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = nyc.db; sourceTree = "<group>"; };
 		9CBDE7FA1883751F001FA2B8 /* icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29.png"; sourceTree = "<group>"; };
 		9CBDE7FB1883751F001FA2B8 /* icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29@2x.png"; sourceTree = "<group>"; };
 		9CBDE7FC1883751F001FA2B8 /* icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-57.png"; sourceTree = "<group>"; };
@@ -214,7 +214,7 @@
 		9C4627D918833D9600A3DD6F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9C7D90CC188AF85700F4C6DF /* nyc.db */,
+				9C7D90CE188B02CC00F4C6DF /* nyc.db */,
 				9CBDE7F91883751F001FA2B8 /* nycLogoIcons */,
 				9CE1F73618833EC800395F4F /* icons */,
 				9C4627DA18833D9600A3DD6F /* nyc-Info.plist */,
@@ -364,7 +364,7 @@
 				9CBDE8151883751F001FA2B8 /* icon_iPad-40.png in Resources */,
 				9C3B51D0188476A300666371 /* nycImage3.jpeg in Resources */,
 				9CBDE80F1883751F001FA2B8 /* icon-57.png in Resources */,
-				9C7D90CD188AF85700F4C6DF /* nyc.db in Resources */,
+				9C7D90CF188B02CC00F4C6DF /* nyc.db in Resources */,
 				9C4627E918833D9600A3DD6F /* Main_iPad.storyboard in Resources */,
 				9CE1F73818833ED600395F4F /* socialService.png in Resources */,
 				9CE1F74018833EF700395F4F /* info.png in Resources */,
@@ -557,7 +557,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "nyc/nyc-Prefix.pch";
 				INFOPLIST_FILE = "nyc/nyc-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -571,7 +571,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "nyc/nyc-Prefix.pch";
 				INFOPLIST_FILE = "nyc/nyc-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
