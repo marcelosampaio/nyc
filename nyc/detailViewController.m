@@ -172,19 +172,20 @@
     
     // content 6
     // Address 2
-    UILabel *msg5=[[UILabel alloc]initWithFrame:CGRectMake(1, lineFeeder, 320, 25)];
+    UILabel *msg5=[[UILabel alloc]initWithFrame:CGRectMake(1, lineFeeder, 320, 50)];
     
     msg5.text=[NSString stringWithFormat:@"%@",address2];
     msg5.textAlignment=NSTextAlignmentCenter;
     msg5.textColor=[UIColor darkGrayColor];
-    
+    msg5.lineBreakMode=NSLineBreakByWordWrapping;
+    msg5.numberOfLines=2;
     
     [self.scroll addSubview:msg5];
     
     // end of content 6
     
     
-    lineFeeder=lineFeeder+25;
+    lineFeeder=lineFeeder+60;
     
     // content 7
     // City
