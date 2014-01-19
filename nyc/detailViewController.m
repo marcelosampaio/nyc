@@ -48,6 +48,8 @@
     // Verify Master origin
     NSArray *row = [self.detailItem componentsSeparatedByString:@";"];
     NSString *origin=[NSString stringWithFormat:@"%@",[row objectAtIndex:0]];
+ 
+    NSLog(@"inicializando scroll com origem=%@",origin);
     
     [self formatLayOutFromMaster:origin];
     
