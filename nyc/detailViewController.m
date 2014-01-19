@@ -59,6 +59,10 @@
     {
         [self formatMuseumAndTheaterLayOut];
     }
+    else if ([master isEqualToString:@"Eletronic Stores"])
+    {
+        [self formatEltronicStoresLayOut];
+    }
 }
 
 -(void)formatMuseumAndTheaterLayOut
@@ -209,11 +213,13 @@
     
     // end of content 7
 
-
-
-
-
 }
+
+-(void)formatEltronicStoresLayOut
+{
+    NSLog(@"formatando Eletronic Stores");
+}
+
 
 -(BOOL)deviceRecognition
 {
